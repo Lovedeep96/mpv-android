@@ -51,7 +51,7 @@ else
 fi
 
 echo "==> Building mpv"
-./buildall.sh --no-deps mpv || {
+./buildall.sh --no-deps -arch arm64 mpv || {
 	# show logfile if configure failed
 	[ ! -f deps/mpv/_build/config.h ] && cat deps/mpv/_build/config.log
 	exit 1
